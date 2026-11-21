@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres             
+      POSTGRES_PASSWORD: marta2012        
+      POSTGRES_DB: models_3d              
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d models_3d"] 
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://postgres:marta2012@db:5432/models_3d 
+      PORT: 3000
+      COOKIE_SECURE: false
+      TRUST_PROXY: false
+    ports:
+      - "3000:3000"
+    volumes:
+      - uploads:/app/public/uploads   
+
+volumes:
+  dbdata:
+  uploads:                           
