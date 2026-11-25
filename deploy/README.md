@@ -75,7 +75,7 @@ docker compose down
 Все скриншоты добавлены после фактического запуска проекта.
 
 Ссылка на репозиторий: https://github.com/nylio-hub/3d-model  
-Успешный запуск workflow: https://github.com/nylio-hub/3d-model/actions
+Успешный запуск workflow: https://github.com/nylio-hub/3d-model/actions/runs/45669584425
 
 ## 6. Ошибки и способы их устранения
 
