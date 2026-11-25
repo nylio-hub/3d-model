@@ -69,12 +69,15 @@ docker compose down
 Скриншоты сохраняются в папке `deploy/screenshots/`:
 
 - `docker-compose-ps.png` — вывод `docker compose ps` (все сервисы в состоянии Up);
-- `site-https.png` — страница по адресу `https://3d-model.localhost` (добавлен, сертификат браузером доверен);
+- `site-https.png` — страница по адресу `https://3d-model.localhost` (сертификат браузером доверен);
 - `network-api.png` — вкладка Network с запросом к `/api/` и заголовком `X-Robots-Tag`;
 - `containers-ports.png` — список контейнеров в Docker Desktop: порты открыты только у nginx;
-- `github-actions.png` — успешное выполнение workflow (дополнительное задание).
+- `github-actions.png` — успешное выполнение workflow GitHub Actions (дополнительное задание).
 
-> Скриншоты добавляются после фактического запуска проекта на компьютере.
+Все скриншоты добавлены после фактического запуска проекта.
+
+Ссылка на репозиторий: https://github.com/nylio-hub/3d-model  
+Успешный запуск workflow: https://github.com/nylio-hub/3d-model/actions/runs/45623017914
 
 ## 6. Ошибки и способы их устранения
 
